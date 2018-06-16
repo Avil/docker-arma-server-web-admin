@@ -17,8 +17,8 @@ RUN mkdir /app
 # Create application user
 RUN useradd -u 123 -U -s /bin/false arma && usermod -G users arma
 
-# Download Arma Server Web Manager
-RUN git clone https://github.com/Dahlgren/arma-server-web-admin.git /app
+# Download Arma Server Web Manager (Steam Workshop Branch)
+RUN git clone -b steam-workshop-mods --single-branch https://github.com/Dahlgren/arma-server-web-admin.git /app
 
 # Install node dependencies for the application
 WORKDIR /app
