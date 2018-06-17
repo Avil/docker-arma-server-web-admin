@@ -28,10 +28,10 @@ module.exports = {
     password: '$PASSWORD',
   },
   steam: {
-    apiKey: $STEAM_API,
-    path: $STEAM_PATH,
-    username: $STEAM_USER,
-    password: $STEAM_PASSWORD,
+    apiKey: '$STEAM_API',
+    path: '$STEAM_PATH',
+    username: '$STEAM_USER',
+    password: '$STEAM_PASSWORD',
   },
 };
 END_OF_CONFIG
