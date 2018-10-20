@@ -20,11 +20,8 @@ RUN useradd -u 123 -U -s /bin/false arma && usermod -G users arma
 # Download Arma Server Web Manager (Steam Workshop Branch)
 RUN git clone -b feature/steam-workshop-mods-status --single-branch https://github.com/Dahlgren/arma-server-web-admin.git /app
 
-WORKDIR /app
-# revert git to pre-broken version (?)
-RUN git reset --hard 4154cd6
-
 # Install node dependencies for the application
+WORKDIR /app
 RUN npm install
 
 # Copy start application script
