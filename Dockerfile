@@ -22,6 +22,7 @@ RUN git clone -b feature/steam-workshop-mods-status --single-branch https://gith
 
 # Install node dependencies for the application
 WORKDIR /app
+RUN git reset --hard 56d12d5
 RUN npm install
 
 # Copy start application script
