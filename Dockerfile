@@ -1,7 +1,7 @@
 FROM node:lts
 
 # Install git
-RUN printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" > /etc/apt/sources.list
+# RUN printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" > /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install -y git
 
@@ -23,7 +23,7 @@ RUN git clone -b feature/steam-workshop-mods-status --single-branch https://gith
 
 # Install node dependencies for the application
 WORKDIR /app
-RUN git reset --hard 56d12d5
+# RUN git reset --hard 56d12d5
 RUN npm install
 
 # Copy start application script
